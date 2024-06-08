@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+/* encabezado */
+.Encabezado{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    
+    border-bottom:groove;
+    border-color: #0e2652;
+}
+.Encabezado1{
+    max-width: 100%;
+   max-height: 110px;
+    display: flex;
+    flex-direction: row;
+   
+}
+.encabezadoimg1{
+    padding-left: 2%;
+    display: flex;
+    justify-content:left ;
+}
+.encabezadoimg2{
+    display: flex;
+    justify-content:right ;
+}
+.Encabezado2{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+}
+.Buscador{
+    display: flex;
+    flex-direction: row;
+    justify-content:end ;
+    padding-top: 3%;
+    padding-right: 10%;
+}
+#Buscar{
+    border: none;  
+    background-color: #0e2652;
+    padding: 5px;
+    margin: 0;
+    border-radius: 10px;
+    color: white;  
+    font-size: medium;
+}
+.Buscador button{
+    height: 30px;
+    font-size: medium;
+    border: groove;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;  
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    background-color: white;
+}
+#LogoLetras{
+    max-width: 100%;
+}
+#LogoChico{
+    max-width: 100%;
+}
+.indiceP ul {
+    list-style-type: none;
+    text-align: center;
+}
+.indiceP li {
+    display:inline-flex;
+    flex-direction: row;
+}
+.indiceP a {
+    text-decoration: none;
+    color: #110303;
+    padding: 5px 5px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+.indiceP a:hover {
+    background-color: #0e2652;
+    color: white;
+}
+/*principal */
+.TP{
+    padding-left: 5%;
+}
+.Hola{
+    max-width: 100%;
+    height: 500px;
+}
+.secciones{
+    display:flex;
+    justify-content: space-around;
+    padding-bottom: 5%;
+}
+.InfoC{
+    display: flex;
+    justify-content:center;
+    flex-direction:column ;
+    width: 400px;
+    padding: 0 30px ;
+    
+}
+.Dato1{
+    display: flex;
+    flex-direction:row;
+    align-items: start;
+    color: #090505;
+    padding: 10px 0;
+}
+.Dato1 a {
+    text-decoration: none;
+    color: #130a0a;
+}
+.Dato1 img {
+    align-items: center;
+    max-width: 10%;
+    padding-right: 10px;
+}
+.RS{
+    display: flex;
+    flex-direction: column;
+}
+.RSimg{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10%;
+}
+.RSimg img{
+    max-width: 40%;
+}
+.RS h3{
+    text-align: center;
+}
+.Mapa{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column-reverse;
+    
+}
+.InfoC .Mapa {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+   }
+.InfoC .Mapa iframe{
+    max-width: 100%;  
+    align-items: center;
+   }
+.FormularioC{
+    max-width: 100;
+    background-color: gray;
+    padding: 5%;
+    margin: 0%;
+    border-radius: 10px;
+
+}
+.FormularioC form{
+    padding: 10%;
+    border-radius: 10px;
+    background-color: rgb(196, 195, 195);
+}
+.FormC lu{
+    list-style: none;
+}
+.FormC li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.FormC li textarea{ 
+    height: 10rem;
+}
+/*footer*/
+.copy{
+    background-color: #0e2652;
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    font-size: large;
+}

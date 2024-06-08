@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Encabezado">
+        <div class="Encabezado1">
+            <div class="encabezadoimg2">
+                <img src="../Imagenes//logo.png" alt="" id="LogoChico">
+            </div>
+            <div class="encabezadoimg1">
+                <img src="../Imagenes/logo letras.png" alt="" id="LogoLetras">
+            </div>
+            <div class="Buscador">
+                <label for="Buscar"><input type="text" id="Buscar" name="Buscar" /></label>
+                <button id="BBuscar"><i class="fas fa-share"></i> Buscar</button>
+            </div>
+        </div>
+        <div class="Encabezado2">
+            <div class="indiceP">
+                <ul>
+                        <li><a href="/Inicio/Index.html">Inicio</a></li>
+                        <li><a href="/Inicio/Nosotros/index.html">Nosotros </a></li>
+                        <li><a href="/Inicio/Catalogo/index.html">Catalogo</a></li>
+                        <li><a href="/Inicio/Galeria/index.html">Galeria</a></li>
+                        <li><a href="/Inicio/Contacto/index.html">Contactanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main class="Principal">
+        <h2 class="TP">Información de contacto </h2>
+        <div class="secciones">
+            <div class="InfoC">
+                <div class="Mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1137.0397536047951!2d-102.84814061049609!3d21.364151566516938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1715232464868!5m2!1ses!2smx" style="border-radius: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa"></iframe>
+                </div>
+                <div class="Dato1">
+                    <img src="../Imagenes/dir.png" alt="">
+                    <p>Calle Ramon Corona # 14 
+                        Col. Centro 99900,
+                        Nochistlan de Mejía 
+                        Zacatecas, Mexico </p>
+                </div>
+                <div class="Dato1">
+                    <img src="../Imagenes/email.png" alt="">
+                    <a href=»piroma.2021@gmail.com»>piroma.2021@gmail.com</a>
+                </div>
+                <div class="Dato1">
+                    <img src="../Imagenes/phone.png" alt="">
+                    <p>+52(346)1125256
+                        +52(346)1033413
+                        +52(346)7130616</p>
+                </div>
+                <div class="Dato1">
+                    <img src="../Imagenes/web.png" alt="">
+                    <p>piroma.com.mx</p>            
+                </div>
+                <div class="RS">
+                    <h3>Siguenos en nuestras redes sociales</h3>
+                    <div class="RSimg">
+                        <img src="../Imagenes/Diseño sin título (31).png" alt="redes sociales ">
+                    </div>
+                </div>
+            </div>
+            <div class="FormularioC">
+                <h1>¿Comó podemos ayudarte?</h1>
+                <form action="" class="FormC" id="myForm">
+                    <ul>
+                        <li>
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="user_name" required />
+                        </li>
+                        <li>
+                            <label for="mail">Correo:</label>
+                            <input type="email" id="mail" name="user_mail" required />
+                        </li>
+                        <li>
+                            <label for="number">Teléfono:</label>
+                            <input type="tel" id="number" name="user_number" required pattern="[0-9]{10}" />
+                        </li>
+                        <li class="comentario">
+                            <label for="msg">Comentario:</label>
+                            <textarea id="msg" name="user_message" required></textarea>
+                        </li>
+                        <li class="checkC" style="display: flex; justify-content: start; flex-direction: row; padding: 5px 10px;">
+                            <input type="checkbox" id="terminos" required>
+                            <label for="terminos">Acepto <a href="#">Términos y Condiciones</a></label>
+                        </li>
+                        <li style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                            <button type="submit">Enviar</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </main>
+    <div class="copy">
+        <p>Copyright &copy; 2024 Grupo Mendoza Aguirre Pirotecnia</p>
+    </div>
+</body>
+<script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const mail = document.getElementById('mail').value;
+        const number = document.getElementById('number').value;
+        const msg = document.getElementById('msg').value;
+        const terminos = document.getElementById('terminos').checked;
+
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        const phonePattern = /^[0-9]{10}$/;
+
+        if (!emailPattern.test(mail)) {
+            alert('Por favor, ingrese un correo electrónico válido.');
+            return;
+        }
+        if (!phonePattern.test(number)) {
+            alert('Por favor, ingrese un número de teléfono válido (10 dígitos numéricos).');
+            return;
+        }
+
+        if (name && msg && terminos) {
+            alert('Formulario enviado correctamente.');
+            document.getElementById('myForm').reset(); 
+        } else {
+            alert('Por favor, complete todos los campos del formulario.');
+        }
+    });
+</script>
+</html>

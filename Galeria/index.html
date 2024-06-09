@@ -35,38 +35,40 @@
 
     <main class="Principal">
         <div class="GaleriaG">
-            <div class="GGT">
-                <h2>Galeria</h2>
-            </div>
-            <div class="Container">
-                <div class="box">
-                    <img src="../Imagenes/1.png" alt="">
+            <div class="gallery-section">
+                <h2>Galería</h2>
+                <div class="gallery-container">
+                  <div class="gallery-box">
+                    <img src="../Imagenes/1.png" alt="Imagen 1" onclick="expandImage(this)">
+                  </div>
+                  <div class="gallery-box">
+                    <img src="../Imagenes/1 (1).png" alt="Imagen 2" onclick="expandImage(this)">
+                  </div>
+                  <div class="gallery-box">
+                    <img src="../Imagenes/1 (2).png" alt="Imagen 3" onclick="expandImage(this)">
+                  </div>
+                  <div class="gallery-box">
+                    <img src="../Imagenes/1 (3).png" alt="Imagen 4" onclick="expandImage(this)">
+                  </div>
+                  <div class="gallery-box">
+                    <img src="../Imagenes/1 (4).png" alt="Imagen 5" onclick="expandImage(this)">
+                  </div>
+                  <div class="gallery-box">
+                    <img src="../Imagenes/1.png" alt="Imagen 6" onclick="expandImage(this)">
+                  </div>
+                  <div class="gallery-box">
+                    <img src="../Imagenes/1 (1).png" alt="Imagen 7" onclick="expandImage(this)">
+                  </div>
+                  <div class="gallery-box">
+                    <img src="../Imagenes/1 (2).png" alt="Imagen 8" onclick="expandImage(this)">
+                  </div>
                 </div>
-                <div class="box">
-                    <img src="../Imagenes/1 (1).png" alt="">
-                </div>
-                <div class="box">
-                    <img src="../Imagenes/1 (2).png" alt="">
-                </div>
-                <div class="box">
-                    <img src="../Imagenes/1 (3).png" alt="">
-                </div>
-                <div class="box">
-                    <img src="../Imagenes/1 (4).png" alt="">
-                </div>
-                <div class="box">
-                    <img src="../Imagenes/1.png" alt="">
-                </div>
-                <div class="box">
-                    <img src="../Imagenes/1 (1).png" alt="">
-                </div>
-                <div class="box">
-                    <img src="../Imagenes/1 (2).png" alt="">
-                </div>
-                <div class="box">
-                    <img src="../Imagenes/1 (3).png" alt="">
-                </div>
-            </div>
+              </div>
+              <div id="expandedImgContainer" class="expanded-img-container">
+                <span onclick="closeExpandedImg()" class="close-btn">&times;</span>
+                <img id="expandedImg" class="expanded-img">
+                <div id="imgText" class="img-text"></div>
+              </div>
         </div>
         <div class="CCEG">
             <div class="CCEGT">
@@ -142,4 +144,20 @@
         <p>Copyright &copy; 2024 Grupo Mendoza Aguirre Pirotecnia</p>
     </div>
 </body>
+<script>
+    function expandImage(imgElement) {
+  const expandedImgContainer = document.getElementById('expandedImgContainer');
+  const expandedImg = document.getElementById('expandedImg');
+  const imgText = document.getElementById('imgText');
+
+  expandedImg.src = imgElement.src;
+  imgText.innerHTML = imgElement.alt;
+  expandedImgContainer.classList.add('active');
+}
+
+function closeExpandedImg() {
+  const expandedImgContainer = document.getElementById('expandedImgContainer');
+  expandedImgContainer.classList.remove('active');
+}
+</script>
 </html>

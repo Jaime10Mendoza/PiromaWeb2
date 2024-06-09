@@ -8,9 +8,7 @@ body {
     width:100%;
     display: flex;
     flex-direction: row;
-    padding: 10px;
-    border-bottom:groove;
-    border-color: #0e2652;
+   
 }
 .Encabezado1{
     max-width: 100%;
@@ -62,82 +60,119 @@ body {
     color: white;
 }
 /*principal */
-.TP{
-    padding-left: 5%;
-}
-.Principal{
-    display:flex;
-    flex-direction: column;
-    justify-content: left;
-    padding: 10px;
-    max-width: 100%;
-}
-.Principal h3{
-    padding: 0%;
-}
-.FormC{
-    display:flex;
-    flex-direction: column;
-    justify-content: left;
-    margin: 10px 10px;
-    max-width: 100%;
-    padding: 10px;
-}
-.FormularioC{
+.header {
+    background-color: #0e2652;
+    width: 100%;
+    height:5rem;
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    width: 100%;
-    border-radius: 10px;
-
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
-.FormularioC form{
+
+.main-container {
     display: flex;
     flex-direction: row;
-    justify-content:left;
-    width:  100%;
-    border-radius: 10px;
-    padding: 0 5% 0 1%; 
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.FormC lu{
-    list-style: none;
-}
-.FormC li{
-    width: 100%;
-    padding: 0 0 0 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-}
-.FormC li textarea{ 
-    height: 4rem;
-    width: auto;
-}
-.ImagenP img{
+.form-container {
+    background-color: #0e2652;
+    padding: 20px;
+    border-radius: 10px;
     width: 30%;
-    padding: 10px;
+    margin-right: 20px;
+    color: white;
 }
-.ImagenP h3{
-padding: 0px 10px;
-}
-.ImagenP{
-display: flex;
-flex-direction: column;
-justify-content: stretch;
-}
-.TablaP{
+
+.product-form {
     display: flex;
     flex-direction: column;
-    width: 100px;
-    table-layout: fixed;
 }
-.TablaP table td{
-    padding:  0 10px;
-    border:inset;
-    border-color: black;
+
+.product-form label {
+    margin-top: 10px;
 }
+
+.product-form input {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.product-form .btn {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #4978ce;
+    color: white;
+    cursor: pointer;
+}
+
+.product-form .btn:hover {
+    background-color: #0056b3;
+}
+
+.table-container {
+    width: 50%;
+}
+.table-container h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    background-color: #0e2652;
+    color: white;
+    padding: 2%;
+    border-radius: 30px;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table th, .product-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-table th {
+    background-color: #f2f2f2;
+}
+
+.product-table img {
+    max-width: 50px;
+}
+
+.edit-btn, .delete-btn {
+    background-color: #ffc107;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
 /*footer*/
 .copy{
     background-color: #0e2652;

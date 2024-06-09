@@ -599,7 +599,7 @@ body {
         font-size: large;
     }
     .Dato1 {
-        max-width: 100%;
+        max-width: 50%;
     }
 }
 
@@ -629,4 +629,68 @@ body {
     .Ftitulo {
         font-size: medium;
     }
+}
+
+/* Estilos para el botón del modal de contraseña */
+.btn-password-modal {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color:#0e2652;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-password-modal:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el modal de contraseña */
+.password-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* Encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+    justify-content: center;
+    align-items: center;
+}
+
+.password-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.password-close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.password-close-btn:hover,
+.password-close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.password-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }

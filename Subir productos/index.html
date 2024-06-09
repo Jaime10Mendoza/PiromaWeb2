@@ -9,121 +9,82 @@
 <body>
     <div class="Encabezado">
         <div class="Encabezado1">
-            <div class="encabezadoimg2">
-                <img src="../Imagenes//logo.png" alt="" id="LogoChico">
-            </div>
             <div class="encabezadoimg1">
                 <img src="../Imagenes/logo letras.png" alt="" id="LogoLetras">
             </div>
         </div>
         <div class="atras"></div>
-        <div > <a href="../Index.html">Salir</a></div>
+        <div > <a href="../Index.html" style="margin-right: 5rem;"><button style="padding: 5% 10%; margin: 5%; background-color: #0e2652; color: white; border-radius: 5px;">Salir</button></a></div>
     </div>
-    <main class="Principal">
-        <h3>Registra tus servicios/productos</h3>
-            <div class="FormularioC">
-                <form action="" class="FormC">
-                    <ul>
-                        <li>
-                          <label for="name">Nombre:</label>
-                          <input type="text" id="name" name="user_name" />
-                        </li>
-                        <li>
-                            <label for="name">Proveedor:</label>
-                            <input type="text" id="name" name="user_name" />
-                        </li>
-                        <li>
-                        <p>Elige tipo: <input  list="listSP" style="width: 99%;"></p>
-                            <datalist id="listSP" >
-                            <option value="Producto" >
-                            <option value="Servicio" >
-                            </datalist>
-                        </li>
-                        <li style="display: flex;
-                        flex-direction: row; justify-content: start; padding: 5px 10px 5px 0px;">
-                            <label for="name" style="padding-right: 10px;">Cantidad:</label>
-                            <input type="number" id="number" name="user_cant" style="max-width:40px;" />
-                        </li>
-                        <li style="display: flex;
-                        flex-direction: row; justify-content: start; padding: 5px 10px 5px 0px;">
-                            <label for="name" style="padding-right: 10px;">Precio:</label>
-                            <input type="number" id="number" name="user_cant" style="max-width:40px;" />
-                        </li>
-                        <li class="comentario">
-                          <label for="msg">Descripcion:</label>
-                          <textarea id="msg" name="user_message" "></textarea>
-                        </li>
-                        <li>
-                            <label for="name">Imagen:</label>
-                            <input type="file">
-                        </li>
-                        <li class="checkC" style="display: flex;
-                        justify-content: start;
-                        flex-direction: row; padding: 5px 10px;">
-                            <input type="checkbox">
-                            <label for="terminos">Acepto <a href="">Terminos y Condiciones</a></label>
-                        </li>
-                        <li style="display: flex;
-                        flex-direction: row;
-                        justify-content: space-around;
-                        align-items: center;">
-                            <button >Guardar</button>
-                            <button >Eliminar</button>
-                         </li>
-                      </ul>     
-                </form>
-                <div class="ImagenP">
-                    <h3>Producto:</h3>
-                    <img src="../Imagenes/p4.jpg" alt="">
-                    <div class="TablaP">
-                        <table>
-                            <tr style="font-style:italic; background-color: #0e2652; color: white;">
-                                <td>Nombre</td>
-                                <td>Proveedor</td>
-                                <td>tipo</td>
-                                <td>Cantidad </td>
-                                <td>Precio</td>
-                            </tr>
-                            <tr style="background-color: white;">
-                                <td>Espacial</td>
-                                <td>Pirodepot</td>
-                                <td>Producto</td>
-                                <td>16</td>
-                                <td>759.99$</td>
-                            </tr>
-                            <tr style="background-color: white;">
-                                <td>&nbsp;</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr style="background-color: white;">
-                                <td>&nbsp;</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr style="background-color: white;">
-                                <td>&nbsp;</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr style="background-color: white;">
-                                <td>&nbsp;</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </main>
+    <header class="header">
+        <h1>Agregar Producto</h1>
+    </header>
+    <main class="main-container">
+        <div class="form-container">
+            <form id="productForm" class="product-form" onsubmit="return validateForm()">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="description">Descripción:</label>
+                <input type="text" id="description" name="description" required>
+
+                <label for="type">Tipo:</label>
+                <input type="text" id="type" name="type" required>
+
+                <label for="duration">Duración:</label>
+                <input type="text" id="duration" name="duration" required>
+
+                <label for="caliber">Calibre:</label>
+                <input type="text" id="caliber" name="caliber" required>
+
+                <label for="price">Precio:</label>
+                <input type="number" id="price" name="price" required>
+
+                <label for="quantity">Cantidad:</label>
+                <input type="number" id="quantity" name="quantity" required>
+
+                <label for="image">Imagen:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+
+                <button type="submit" class="btn">Agregar Producto</button>
+            </form>
+        </div>
+        <div class="table-container">
+            <h2>Lista de Productos</h2>
+            <table id="productTable" class="product-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                        <th>Duración</th>
+                        <th>Calibre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Imagen</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dragon</td>
+                        <td>Cake para pirotecnia aerea</td>
+                        <td> Cuadrado</td>
+                        <td> 32 segundos</td>
+                        <td> 8 pulgadas</td>
+                        <td>$750</td>
+                        <td>10</td>
+                        <td><img src="../Imagenes/p1.jpg" alt="Producto Default"></td>
+                        <td style="display: flex; flex-direction: column;">
+                            <button class="edit-btn" onclick="editProduct(this)" style="margin-bottom: 11%;">  Ediar </button>
+                            <button class="delete-btn" onclick="deleteProduct(this)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="script.js"></script>
     <div class="copy">
         <p>Copyright &copy; 2024 Grupo Mendoza Aguirre Pirotecnia</p>
     </div>

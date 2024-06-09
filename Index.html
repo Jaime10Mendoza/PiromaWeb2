@@ -229,6 +229,15 @@
                 </div>
             </Div>
         </div>
+        <button id="openPasswordModalBtn" class="btn-password-modal">Colaborador</button>
+        <div id="passwordModal" class="password-modal">
+            <div class="password-modal-content">
+                <span class="password-close-btn" onclick="closePasswordModal()">&times;</span>
+                <h2>Ingrese la Contraseña</h2>
+                <input type="password" id="passwordInput" class="password-input" placeholder="Contraseña">
+                <button onclick="checkPassword()" class="btn-password-modal">Entrar</button>
+            </div>
+        </div>
     </footer>
     <div class="copy">
         <p>Copyright &copy; 2024 Grupo Mendoza Aguirre Pirotecnia</p>
@@ -313,5 +322,30 @@ document.addEventListener('DOMContentLoaded', () => {
   showProducts(currentProductIndex);
   window.addEventListener('resize', () => showProducts(currentProductIndex));
 });
+document.getElementById('openPasswordModalBtn').addEventListener('click', function() {
+    document.getElementById('passwordModal').style.display = 'flex';
+});
+
+function closePasswordModal() {
+    document.getElementById('passwordModal').style.display = 'none';
+}
+
+function checkPassword() {
+    const password = document.getElementById('passwordInput').value;
+    const correctPassword = 'Piroma2023'; 
+
+    if (password === correctPassword) {
+        window.location.href = './Subir productos/index.html'; 
+    } else {
+        alert('Contraseña incorrecta. Inténtelo de nuevo.');
+    }
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('passwordModal');
+    if (event.target === modal) {
+        closePasswordModal();
+    }
+}
 </script>
 </html>

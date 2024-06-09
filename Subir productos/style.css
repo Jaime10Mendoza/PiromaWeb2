@@ -5,9 +5,10 @@ body {
 }
 /* encabezado */
 .Encabezado{
-    width:100%;
+    width:90%;
     display: flex;
     flex-direction: row;
+    align-items: center;
    
 }
 .Encabezado1{
@@ -15,6 +16,7 @@ body {
    max-height: 110px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
    
 }
 .encabezadoimg1{

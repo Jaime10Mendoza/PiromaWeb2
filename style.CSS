@@ -389,6 +389,7 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
+    background-color: #0e2652;
   }
   
   .slides {
@@ -400,10 +401,14 @@ body {
     min-width: 100%;
     box-sizing: border-box;
   }
+
+  .slide a{
+    text-decoration: none;}
   
   .slide img {
     width: 100%;
     display: block;
+    object-fit: cover;
   }
   
   .caption {

@@ -144,7 +144,7 @@ body {
   }
   
   .product-img {
-    width: 100%;
+    width: 90%;
     display: block;
   }
   
@@ -402,8 +402,6 @@ body {
     box-sizing: border-box;
   }
 
-  .slide a{
-    text-decoration: none;}
   
   .slide img {
     width: 100%;
